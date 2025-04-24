@@ -9,6 +9,18 @@ function App() {
     {rowNumber: 3, rowDesc: 'Finish homework', rowAssigned: 'Karla'},
     {rowNumber: 4, rowDesc: 'Feed pets', rowAssigned: 'Jose'}
   ];
+  
+  const addTodo = () => {
+    if (todos.length > 0) {
+      const newTodo = {
+        rowNumber: todos.length+1,
+        rowDesc: 'New Todo',
+        rowAssigned: 'New User'
+      };
+      todos.push(newTodo);
+      console.log(todos);
+    }
+  }
 
   return (
     <div className="mt-5 container">
@@ -18,6 +30,9 @@ function App() {
         </div>
         <div className="card-body">
           <TodoTable todos={todos} />
+          <button className="btn btn-primary" onClick={addTodo}>
+            Add new todo
+          </button>
         </div>
       </div>
     </div>
