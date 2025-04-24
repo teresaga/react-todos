@@ -6,7 +6,8 @@ function App() {
   const todos = [
     {rowNumber: 1, rowDesc: 'Cook meal', rowAssigned: 'María'},
     {rowNumber: 2, rowDesc: 'Clean house', rowAssigned: 'Jose'},
-    {rowNumber: 3, rowDesc: 'Finish homework', rowAssigned: 'Karla'}
+    {rowNumber: 3, rowDesc: 'Finish homework', rowAssigned: 'Karla'},
+    {rowNumber: 4, rowDesc: 'Feed pets', rowAssigned: 'Jose'}
   ];
 
   return (
