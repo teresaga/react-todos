@@ -1,14 +1,15 @@
+import React, {useState} from 'react';
 import './App.css';
 import TodoTable from './components/TodoTable';
 
 function App() {
 
-  const todos = [
+  const [todos, setTodos] = useState([
     {rowNumber: 1, rowDesc: 'Cook meal', rowAssigned: 'María'},
     {rowNumber: 2, rowDesc: 'Clean house', rowAssigned: 'Jose'},
     {rowNumber: 3, rowDesc: 'Finish homework', rowAssigned: 'Karla'},
     {rowNumber: 4, rowDesc: 'Feed pets', rowAssigned: 'Jose'}
-  ];
+  ]);
   
   const addTodo = () => {
     if (todos.length > 0) {
@@ -17,7 +18,7 @@ function App() {
         rowDesc: 'New Todo',
         rowAssigned: 'New User'
       };
-      todos.push(newTodo);
+      setTodos(todos => [...todos, newTodo]);
       console.log(todos);
     }
   }
